@@ -5,4 +5,6 @@ MRISeqClassifier is an open-source toolkit designed for classifying sequences (s
 
 ## Install
 
+## Download Ckpts and Data
+
 ## Quick start
