@@ -1,4 +1,4 @@
-# MRISeqClassifier (Coming soon)
+# MRISeqClassifier
 
 <div align='center'><h2>MRISeqClassifier: A Deep Learning Toolkit for Precise MRI Sequence Classification</h2></div>
 MRISeqClassifier is an open-source toolkit designed for classifying sequences (series) of MRI scans.
@@ -30,6 +30,6 @@ This toolkit use the NACC MRI dataset. Please request data from https://naccdata
 Please download pretrained-models from , and put them into folder `02_models`.
 
 ## Change The Data PATH from yaml file
-After preprocessing the data, please change the IMAGE_PATH in the yaml file `00_config.yml`.
+After preprocessing the data, please change the `IMAGE_PATH` in the yaml file `00_config.yml`.
 
 ## Quick start
