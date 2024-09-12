@@ -1,3 +1,3 @@
 PATH:
   IMAGE_PATH: ''
-  DATASET_TARGET_PATH: './ImageFolder/'
+  DATASET_TARGET_PATH: '../01_data/ImageFolder/'

@@ -18,6 +18,8 @@ from sklearn.model_selection import KFold
 import statistics
 import argparse
 import pickle
+import yaml
+from easydict import EasyDict as edict
 # import functools
 # print = functools.partial(print, flush=True)
 
@@ -26,7 +28,7 @@ warnings.filterwarnings("ignore")
 
 torch.manual_seed(42)
 
-
+###################################################
 parser = argparse.ArgumentParser()
 parser.add_argument('--proximal', type=str, default='middle')
 parser.add_argument('--model', type=str, default='alexnet')
@@ -35,21 +37,19 @@ parser.add_argument('--fold', type=int, default=5)
 args = parser.parse_args()
 print('\n\n', args, '\n')
 
-k_folds = args.fold
-kfold = KFold(n_splits=k_folds, shuffle=True)
+# Read config to get the path
+with open('../00_config.yml', 'r') as file:
+    config = yaml.safe_load(file)
+config = edict(config)
 
 num_epochs = args.epoch
+FILE_NAME = args.proximal
 
-DATA_PATH = '../data/ImageFolder/Cross_Validation/'
+# Get Data path
+DATA_PATH = os.path.join(config.PATH.IMAGE_PATH, 'Cross_Validation', args.proximal)
 print('DATA_PATH:', DATA_PATH)
-if args.proximal == 'middle':
-    data_dir = DATA_PATH + 'middle'
-    FILE_NAME = 'mid'
-elif args.proximal == 'first':
-    data_dir = DATA_PATH + 'first'
-    FILE_NAME = 'first'
-
-BEST_MODLE_PATH = os.path.join('../output', f'{args.fold}-Fold', args.model)
+# Saving model path
+BEST_MODLE_PATH = os.path.join('./output', f'{args.fold}-Fold', args.model)
 print('BEST_MODLE_PATH:', BEST_MODLE_PATH)
 
 if not os.path.exists(BEST_MODLE_PATH):
@@ -59,7 +59,11 @@ if not os.path.exists(BEST_MODLE_PATH):
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device, '\n')
 
-# Data Transform
+# K Fold Cross Validation
+k_folds = args.fold
+kfold = KFold(n_splits=k_folds, shuffle=True)
+
+# Build Data Loader
 base_transform = transforms.Compose([
     transforms.Lambda(lambda x: x.convert('RGB')),
     transforms.Resize((224, 224)),
@@ -67,10 +71,12 @@ base_transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 train_transform = transforms.Compose([transforms.RandomHorizontalFlip(),] + base_transform.transforms)
-
-dataset = datasets.ImageFolder(root=f'{data_dir}/train', transform=base_transform)
-test_dataset = datasets.ImageFolder(root=f'{data_dir}/test', transform=base_transform)
+## Training data
+dataset = datasets.ImageFolder(root=f'{DATA_PATH}/train', transform=base_transform)
+## Testing data
+test_dataset = datasets.ImageFolder(root=f'{DATA_PATH}/test', transform=base_transform)
 test_loader = DataLoader(test_dataset, batch_size=4, num_workers=4)
+
 class_names = test_dataset.classes
 num_classes =  len(class_names)
 
@@ -86,8 +92,8 @@ if __name__ == '__main__':
         train_subsampler = SubsetRandomSampler(train_ids)
         val_subsampler = SubsetRandomSampler(test_ids)
         
-        train_dataset = datasets.ImageFolder(root=f'{data_dir}/train', transform=train_transform)
-        val_dataset = datasets.ImageFolder(root=f'{data_dir}/train', transform=base_transform)
+        train_dataset = datasets.ImageFolder(root=f'{DATA_PATH}/train', transform=train_transform)
+        val_dataset = datasets.ImageFolder(root=f'{DATA_PATH}/train', transform=base_transform)
         
         train_loader = DataLoader(train_dataset, batch_size=4, sampler=train_subsampler)
         val_loader = DataLoader(val_dataset, batch_size=4, sampler=val_subsampler)
