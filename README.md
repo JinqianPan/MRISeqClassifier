@@ -26,6 +26,8 @@ This toolkit use the NACC MRI dataset. Please request data from https://naccdata
 >
 > For how to `preprocess NACC MRI data`, please browse [my guide: NACC MRI Data Processing](https://github.com/JinqianPan/NACC_image).
 
+After preprocessing the data, please change the `IMAGE_PATH` in the yaml file `00_config.yml`.
+
 ### Pretrained-models
 Please download pretrained-models from , and put them into folder `02_models`.
 
@@ -40,12 +42,7 @@ Please download pretrained-models from , and put them into folder `02_models`.
 >                 |- T2WI
 >                 |- ...
 >            |- test
->                 |- T1WI (label name)
->                 |- T2WI
 >                 |- ...
 > ```
-
-## Change The Data PATH from yaml file
-After preprocessing the data, please change the `IMAGE_PATH` in the yaml file `00_config.yml`.
 
 ## Quick start
