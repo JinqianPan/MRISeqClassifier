@@ -15,7 +15,7 @@ cd MRISeqClassifier
 pip install -r requirements.txt
 ```
 
-## Download Data And Pretraind-models
+## Download Data And Best Models
 If you want to use another data and train the model by yourself, you could skip this step.
 
 ### Data
@@ -32,8 +32,8 @@ After preprocessing the data, please change the `IMAGE_PATH` in the yaml file `0
   <img src="https://github.com/JinqianPan/MRISeqClassifier/blob/main/01_data/ImageFolder/example.jpg">
 </div>
 
-### Pretrained-models
-Please download pretrained-models from [Google Drive](https://drive.google.com/drive/folders/1kY7bkytT5G3ihGefWhfwZOErwvvaufC5?usp=sharing), and put them into folder `02_models`.
+### Best Models
+Please download best models from [Google Drive](https://drive.google.com/drive/folders/1kY7bkytT5G3ihGefWhfwZOErwvvaufC5?usp=sharing), and put them into folder `02_models`.
 
 >[!NOTE]
 > If you are using your own dataset, please construct the training and testing sets as follows: (we use `torchvision.datasets.ImageFolder` to build data loader)
