@@ -57,3 +57,10 @@ Please download best models from [Google Drive](https://drive.google.com/drive/f
 
 ## Quick start
 If you just want to use 
+
+
+## Training
+For training data, 
+```
+nohup python -u training.py --proximal middle --model densenet121 --epoch 100 --fold 5 > ./denseNet121/output_mid.log 2>&1 &
+```
