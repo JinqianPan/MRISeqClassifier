@@ -15,6 +15,21 @@ cd MRISeqClassifier
 pip install -r requirements.txt
 ```
 
-## Download Ckpts and Data
+## Download Data And Pretraind-models
+If you want to use another data and train the model by yourself, you could skip this step.
+
+### Data
+This toolkit use the NACC MRI dataset. Please request data from https://naccdata.org/.
+
+>[!TIP]
+> For how to `download the image data` from NACC AWS S3 bucket, please browse [my guide: NACC Image Data Download Experience](https://github.com/JinqianPan/NACC_img_download).
+>
+> For how to `preprocess NACC MRI data`, please browse [my guide: NACC MRI Data Processing](https://github.com/JinqianPan/NACC_image).
+
+### Pretrained-models
+Please download pretrained-models from , and put them into folder `02_models`.
+
+## Change The Data PATH from yaml file
+After preprocessing the data, please change the IMAGE_PATH in the yaml file `00_config.yml`.
 
 ## Quick start
