@@ -36,6 +36,7 @@ Please download pretrained-models from , and put them into folder `02_models`.
 >     |- ImageFolder
 >            |- train
 >                 |- T1WI (label name)
+>                     |- MRI.jpg
 >                 |- T2WI
 >                 |- ...
 >            |- test
