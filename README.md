@@ -15,6 +15,12 @@ cd MRISeqClassifier
 pip install -r requirements.txt
 ```
 
+>[!IMPORTANCE]
+> In the `requirements.txt`, the PyTorch installation is not included. 
+>
+> Please use `nvidia-smi` to verify your CUDA version and then download the appropriate version of PyTorch from the [official website](https://pytorch.org/).
+
+
 ## Download Data And Best Models
 If you want to use another data and train the model by yourself, you could skip this step.
 
