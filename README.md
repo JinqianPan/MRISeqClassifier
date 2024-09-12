@@ -15,7 +15,7 @@ cd MRISeqClassifier
 pip install -r requirements.txt
 ```
 
->[!IMPORTANCE]
+>[!IMPORTANT]
 > In the `requirements.txt`, the PyTorch installation is not included. 
 >
 > Please use `nvidia-smi` to verify your CUDA version and then download the appropriate version of PyTorch from the [official website](https://pytorch.org/).
