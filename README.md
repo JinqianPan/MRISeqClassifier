@@ -29,7 +29,7 @@ This toolkit use the NACC MRI dataset. Please request data from https://naccdata
 After preprocessing the data, please change the `IMAGE_PATH` in the yaml file `00_config.yml`.
 
 <div align="center">
-  <img src="https://github.com/JinqianPan/MRISeqClassifier/01_data/ImageFolder/example.jpg">
+  <img src="https://github.com/JinqianPan/MRISeqClassifier/blob/main/01_data/ImageFolder/example.jpg">
 </div>
 
 ### Pretrained-models
