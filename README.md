@@ -33,7 +33,7 @@ After preprocessing the data, please change the `IMAGE_PATH` in the yaml file `0
 </div>
 
 ### Pretrained-models
-Please download pretrained-models from , and put them into folder `02_models`.
+Please download pretrained-models from [Google Drive](https://drive.google.com/drive/folders/1kY7bkytT5G3ihGefWhfwZOErwvvaufC5?usp=sharing), and put them into folder `02_models`.
 
 >[!NOTE]
 > If you are using your own dataset, please construct the training and testing sets as follows: (we use `torchvision.datasets.ImageFolder` to build data loader)
