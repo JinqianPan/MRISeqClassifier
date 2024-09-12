@@ -62,5 +62,5 @@ If you just want to use
 ## Training
 For training data, you could use code below, or use slurm to run the code.
 ```
-nohup python -u training.py --proximal middle --model densenet121 --epoch 100 --fold 5 > ./denseNet121/output_mid.log 2>&1 &
+nohup python -u training.py --proximal middle --model densenet121 --epoch 100 --fold 5 > ./output/5-Fold/denseNet121/output_mid.log 2>&1 &
 ```
