@@ -29,6 +29,21 @@ This toolkit use the NACC MRI dataset. Please request data from https://naccdata
 ### Pretrained-models
 Please download pretrained-models from , and put them into folder `02_models`.
 
+>[!NOTE]
+> If you are using your own dataset, please construct the training and testing sets as follows:
+> ```
+> 01_data
+>     |- ImageFolder
+>            |- train
+>                 |- T1WI (label name)
+>                 |- T2WI
+>                 |- ...
+>            |- test
+>                 |- T1WI (label name)
+>                 |- T2WI
+>                 |- ...
+> ```
+
 ## Change The Data PATH from yaml file
 After preprocessing the data, please change the `IMAGE_PATH` in the yaml file `00_config.yml`.
 
