@@ -62,5 +62,10 @@ If you just want to use
 ## Training
 For training data, you could use code below, or use slurm to run the code.
 ```
-nohup python -u training.py --proximal middle --model densenet121 --epoch 100 --fold 10 > ./output/5-Fold/denseNet121/output_mid.log 2>&1 &
+nohup python -u 03_training.py --proximal middle --model densenet121 --epoch 100 --fold 10 > ./output/10-Fold/denseNet121/output_mid.log 2>&1 &
+```
+
+After training all models, you could use code below to get the result of voting:
+```
+nohup python -u 04_training_vote.py --proximal middle --fold 10 > ./output/10-Fold/vote/output_mid.log 2>&1 &
 ```
