@@ -38,7 +38,7 @@ args = parser.parse_args()
 print('\n\n', args, '\n')
 
 # Read config to get the path
-with open('../00_config.yml', 'r') as file:
+with open('./00_config.yml', 'r') as file:
     config = yaml.safe_load(file)
 config = edict(config)
 
