@@ -67,6 +67,10 @@ $PATH = 'your image path'
 python 05_toolkit.py --path $PATH
 ```
 
+>[!IMPORTANT]
+> Just remember: Before training, this toolkit can only classify 6 types mentioned above. 
+> 
+> If you want to use your own data, please go through the step training.
 
 ## Training
 For training data, you could use code below, or use slurm to run the code.
