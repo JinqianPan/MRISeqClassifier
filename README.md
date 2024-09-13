@@ -8,8 +8,8 @@ MRISeqClassifier is an open-source toolkit designed for classifying sequences (s
 </div>
 
 ## News
-[09172024] Paper submit to AMIA 2025 Informatics Summit
-[09132024] Github available
+[09172024] Paper submit to AMIA 2025 Informatics Summit  
+[09132024] Github available  
 [08062024] The project started
 
 ## Install
