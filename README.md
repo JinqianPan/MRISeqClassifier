@@ -91,5 +91,5 @@ nohup python -u 04_training_vote.py --proximal middle --fold 10 > ./output/10-Fo
 If you use MRISeqClassifier in your research, please cite our paper:
 
 ```
-Submitted to AMIA
+Coming Soon
 ```
