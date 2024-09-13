@@ -8,9 +8,9 @@ MRISeqClassifier is an open-source toolkit designed for classifying sequences (s
 </div>
 
 ## News
-[09172024] Paper submit to AMIA 2025 Informatics Summit  
-[09132024] Github available  
-[08062024] The project started
+[2024 0917] Paper submit to AMIA 2025 Informatics Summit  
+[2024 0912] Github available  
+[2024 0806] The project started
 
 ## Install
 Create a new conda environment and install the required packages:
