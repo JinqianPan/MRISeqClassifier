@@ -1,7 +1,7 @@
 # MRISeqClassifier
 
 <div align='center'><h2>MRISeqClassifier: A Deep Learning Toolkit for Precise MRI Sequence Classification</h2></div>
-MRISeqClassifier is an open-source toolkit designed for classifying sequences (series) of MRI scans.
+MRISeqClassifier is an open-source toolkit designed for classifying sequences (series) of MRI scans.  
 
 <div align="center">
   <img src="https://github.com/JinqianPan/MRISeqClassifier/blob/main/02_models/arch.jpg">
