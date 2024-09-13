@@ -7,6 +7,10 @@ MRISeqClassifier is an open-source toolkit designed for classifying sequences (s
   <img src="https://github.com/JinqianPan/MRISeqClassifier/blob/main/02_models/arch.jpg">
 </div>
 
+## News
+[09172024] Paper submit to AMIA 2025 Informatics Summit
+[09132024] Github available
+[08062024] The project started
 
 ## Install
 Create a new conda environment and install the required packages:
@@ -81,4 +85,11 @@ nohup python -u 03_training.py --proximal middle --model densenet121 --epoch 100
 After training all models, you could use code below to get the result of voting:
 ```
 nohup python -u 04_training_vote.py --proximal middle --fold 10 > ./output/10-Fold/vote/output_mid.log 2>&1 &
+```
+
+## Citation
+If you use MRISeqClassifier in your research, please cite our paper:
+
+```
+Submitted to AMIA
 ```
