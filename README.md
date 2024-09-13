@@ -63,7 +63,8 @@ Please download best models from [Google Drive](https://drive.google.com/drive/f
 ## Quick start
 If you just want to use this tool to classify MRI images, please use the code below:
 ```
-python 05_toolkit.py $PATH
+$PATH = 'your image path'
+python 05_toolkit.py --path $PATH
 ```
 
 
