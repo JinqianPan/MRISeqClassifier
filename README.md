@@ -35,7 +35,7 @@ pip install -r requirements.txt
 If you want to use another data and train the model by yourself, you could skip this step.
 
 ### Data
-This toolkit use the NACC MRI dataset. Please request data from https://naccdata.org/.
+This toolkit is training by NACC MRI dataset. Please request data from https://naccdata.org/.
 
 >[!TIP]
 > For how to `download the image data` from NACC AWS S3 bucket, please browse [my guide: NACC Image Data Download Experience](https://github.com/JinqianPan/NACC_img_download).
