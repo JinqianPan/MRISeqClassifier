@@ -92,5 +92,14 @@ nohup python -u 04_training_vote.py --proximal middle --fold 10 > ./output/10-Fo
 If you use MRISeqClassifier in your research, please cite our paper:
 
 ```
-Coming Soon
+@article {Pan2024.09.19.24313976,
+	author = {Pan, Jinqian and Chen, Qi and Sun, Chengkun and Liang, Renjie and Bian, Jiang and Xu, Jie},
+	title = {MRISeqClassifier: A Deep Learning Toolkit for Precise MRI Sequence Classification},
+	elocation-id = {2024.09.19.24313976},
+	year = {2024},
+	doi = {10.1101/2024.09.19.24313976},
+	publisher = {Cold Spring Harbor Laboratory Press},
+	URL = {https://www.medrxiv.org/content/early/2024/09/22/2024.09.19.24313976},
+	journal = {medRxiv}
+}
 ```
