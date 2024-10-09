@@ -1,8 +1,8 @@
 # Usage:
-# nohup python -u training.py --proximal middle --model alexnet --epoch 100 --fold 5 > ./AlexNet/output_mid.log 2>&1 &
-# nohup python -u training.py --proximal middle --model googlenet --epoch 100 --fold 5 > ./GoogLeNet/output_mid.log 2>&1 &
-# nohup python -u training.py --proximal middle --model resnet18 --epoch 100 --fold 5 > ./ResNet18/output_mid.log 2>&1 &
-# nohup python -u training.py --proximal middle --model densenet121 --epoch 100 --fold 5 > ./DenseNet121/output_mid.log 2>&1 &
+# nohup python -u 03_training.py --proximal middle --model alexnet --epoch 100 --fold 5 > ./AlexNet/output_mid.log 2>&1 &
+# nohup python -u 03_training.py --proximal middle --model googlenet --epoch 100 --fold 5 > ./GoogLeNet/output_mid.log 2>&1 &
+# nohup python -u 03_training.py --proximal middle --model resnet18 --epoch 100 --fold 5 > ./ResNet18/output_mid.log 2>&1 &
+# nohup python -u 03_training.py --proximal middle --model densenet121 --epoch 100 --fold 5 > ./DenseNet121/output_mid.log 2>&1 &
 
 import torch
 import torch.nn as nn
@@ -46,7 +46,7 @@ num_epochs = args.epoch
 FILE_NAME = args.proximal
 
 # Get Data path
-DATA_PATH = os.path.join(config.PATH.IMAGE_PATH, 'Cross_Validation', args.proximal)
+DATA_PATH = os.path.join(config.PATH.DATASET_TARGET_PATH[1:], 'Cross_Validation', args.proximal)
 print('DATA_PATH:', DATA_PATH)
 # Saving model path
 BEST_MODLE_PATH = os.path.join('./output', f'{args.fold}-Fold', args.model)
