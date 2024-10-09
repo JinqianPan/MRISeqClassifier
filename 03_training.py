@@ -49,7 +49,7 @@ FILE_NAME = args.proximal
 DATA_PATH = os.path.join(config.PATH.DATASET_TARGET_PATH[1:], 'Cross_Validation', args.proximal)
 print('DATA_PATH:', DATA_PATH)
 # Saving model path
-BEST_MODLE_PATH = os.path.join('./output', f'{args.fold}-Fold', args.model)
+BEST_MODLE_PATH = os.path.join('./02_models', f'{args.fold}-Fold', args.model)
 print('BEST_MODLE_PATH:', BEST_MODLE_PATH)
 
 if not os.path.exists(BEST_MODLE_PATH):
