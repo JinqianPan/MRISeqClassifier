@@ -29,7 +29,7 @@ config = edict(config)
 
 # Get Data path
 proximal = args.proximal
-data_dir = os.path.join(config.PATH.IMAGE_PATH, 'Cross_Validation', proximal)
+data_dir = os.path.join(config.PATH.DATASET_TARGET_PATH[1:], 'Cross_Validation', proximal)
 
 save_dir = os.path.join('../output/vote', proximal)
 if not os.path.exists(save_dir):
@@ -86,13 +86,13 @@ if __name__ == '__main__':
     # for n_splits in [10]:
     n_splits = args.fold
 
-    root_folder = f'../output/{n_splits}-Fold'
+    root_folder = f'./output/{n_splits}-Fold'
     results = []
 
     for n in range(n_splits):
         # Read best model
         if proximal == 'middle':
-            filename = f'Folder{n}_mid_best_model.pth'
+            filename = f'Folder{n}_middle_best_model.pth'
         else:
             filename = f'Folder{n}_first_best_model.pth'
         file_paths = find_files(root_folder, filename)
