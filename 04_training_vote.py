@@ -31,7 +31,7 @@ config = edict(config)
 proximal = args.proximal
 data_dir = os.path.join(config.PATH.DATASET_TARGET_PATH[1:], 'Cross_Validation', proximal)
 
-save_dir = os.path.join('../output/vote', proximal)
+save_dir = os.path.join('./02_models', 'vote', proximal)
 if not os.path.exists(save_dir):
     os.makedirs(save_dir)
 
@@ -86,7 +86,7 @@ if __name__ == '__main__':
     # for n_splits in [10]:
     n_splits = args.fold
 
-    root_folder = f'./output/{n_splits}-Fold'
+    root_folder = f'./02_models/{n_splits}-Fold'
     results = []
 
     for n in range(n_splits):
