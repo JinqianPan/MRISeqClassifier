@@ -49,7 +49,7 @@ After preprocessing the data, please change the `IMAGE_PATH` in the yaml file `0
 </div>
 
 ### Best Models
-Please download best models from [Google Drive](https://drive.google.com/drive/folders/1kY7bkytT5G3ihGefWhfwZOErwvvaufC5?usp=sharing), and put them into folder `02_models`.
+Please download best models from [Google Drive](https://drive.google.com/drive/folders/1kY7bkytT5G3ihGefWhfwZOErwvvaufC5?usp=sharing), and put them into folder `02_models/best_model`.
 
 >[!NOTE]
 > If you are using your own dataset, please construct the training and testing sets as follows: (we use `torchvision.datasets.ImageFolder` to build data loader)
@@ -64,6 +64,9 @@ Please download best models from [Google Drive](https://drive.google.com/drive/f
 >            |- test
 >                 |- ...
 > ```
+
+### Results for the Remaining MRI Sequence Types in the NACC Dataset
+We offer the result for the rest NACC MRI Sequence type in [Google Drive](https://drive.google.com/drive/folders/1kY7bkytT5G3ihGefWhfwZOErwvvaufC5?usp=sharing).
 
 ## Quick start
 If you just want to use this tool to classify MRI images, please use the code below:
