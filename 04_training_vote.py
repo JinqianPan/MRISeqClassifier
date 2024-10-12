@@ -66,8 +66,6 @@ def find_files(root_folder, filename):
 
 def calculate_vote(row):
     most_common = row.iloc[1:].mode()
-    if len(most_common) > 1:
-        return row['Ground Truth']
     return most_common.iloc[0]
 
 if __name__ == '__main__':
