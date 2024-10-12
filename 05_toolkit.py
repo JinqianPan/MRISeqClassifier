@@ -14,7 +14,6 @@ parser.add_argument('--num_classes', type=int, default=6)
 args = parser.parse_args()
 print('\n\n', args, '\n\n')
 
-custom_order = ['T1', 'T2', 'FLAIR', 'DWI', 'DTI', 'OTHER']
 class_names = ['DTI', 'DWI', 'FLAIR', 'OTHER', 'T1', 'T2']
 
 # Get device
@@ -23,7 +22,7 @@ print(device)
 
 # Data Path
 DATA_PATH = args.path
-BEST_MODLE_PATH = './02_models'
+BEST_MODLE_PATH = './02_models/best_model'
 
 # Find the model ckpt
 def find_specific_files(directory, file_keyword):
@@ -34,9 +33,7 @@ def find_specific_files(directory, file_keyword):
 
 # Vote
 def calculate_vote(row):
-    most_common = row.iloc[1:].mode()
-    if len(most_common) > 1:
-        return row['Ground Truth']
+    most_common = row.mode()
     return most_common.iloc[0]
 
 # Build dataset
@@ -166,7 +163,10 @@ if __name__ == '__main__':
         res[model_name] = all_preds
 
     df = pd.DataFrame(res)
-    df['vote'] = df.apply(calculate_vote, axis=1)
 
-    save_path = os.path.join('./output', 'result.csv')
+    df['vote'] = df.apply(calculate_vote, axis=1)
+    mapping = {i: class_name for i, class_name in enumerate(class_names)}
+    df.iloc[:, 1:] = df.iloc[:, 1:].applymap(lambda x: mapping.get(x, x))
+
+    save_path = os.path.join('./', 'result.csv')
     df.to_csv(save_path, index=False)
