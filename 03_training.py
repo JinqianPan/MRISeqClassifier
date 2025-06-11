@@ -143,9 +143,9 @@ if __name__ == '__main__':
         optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 
         # Start Training
+        best_acc = 0.0
+        best_epoch_num = 0
         for epoch in range(num_epochs): 
-            best_acc = 0.0
-            best_epoch_num = 0
             print(f'\nFold {fold}, Epoch {epoch}/{num_epochs - 1}')
             print('-' * 10)
 
